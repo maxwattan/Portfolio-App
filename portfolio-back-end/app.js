@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('Sweets 4 You <3');
+    res.send('Sweet Baked Goods 4 You <3');
   });
 
   app.get('*', (req,res) => {
