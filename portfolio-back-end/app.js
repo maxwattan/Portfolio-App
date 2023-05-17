@@ -1,11 +1,16 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-// const controllers
+const bakeryController = require("./controllers/bakeryController")
 
+//cors is
+
+//express is 
 
 app.use(cors());
 app.use(express.json());
+
+app.use("/sweets", bakeryController)
 
 app.get('/', (req, res) => {
     res.send('Sweet Baked Goods 4 You <3');
