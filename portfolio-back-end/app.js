@@ -3,9 +3,9 @@ const app = express();
 const cors = require("cors");
 const bakeryController = require("./controllers/bakeryController")
 
-//cors is
+//cors is api fetch cross origin server
 
-//express is 
+//express is handling request api crud
 
 app.use(cors());
 app.use(express.json());
