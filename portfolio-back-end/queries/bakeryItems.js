@@ -29,8 +29,8 @@ const getASweet = async (id) => {
 
 const createSweet = async (sweetToAdd) => {
     try {
-        const newsweet = await db.one('INSERT INTO sweets (img, title, price, content, allergens, is_fav ) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *', [sweetToAdd.img, sweetToAdd.title, sweetToAdd.price, sweetToAdd.content, sweetToAdd.allergens, sweetToAdd.is_fav])
-        return newsweet
+        const newSweet = await db.one('INSERT INTO sweets (img, title, price, content, allergens, is_fav ) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *', [sweetToAdd.img, sweetToAdd.title, sweetToAdd.price, sweetToAdd.content, sweetToAdd.allergens, sweetToAdd.is_fav])
+        return newSweet
     } catch (error) {
         return error
     }

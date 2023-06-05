@@ -6,10 +6,10 @@ CREATE DATABASE bakery_items;
 
 CREATE TABLE sweets (
 id SERIAL PRIMARY KEY,
-img VARCHAR,
-title VARCHAR,
-price INTEGER,
-content VARCHAR,
-allergens VARCHAR,
+img TEXT,
+title TEXT,
+price TEXT,
+content TEXT,
+allergens TEXT,
 is_fav BOOLEAN
-)
+);
