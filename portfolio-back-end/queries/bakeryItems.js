@@ -51,7 +51,7 @@ const deleteSweet = async (id) => {
 
 const updateSweet = async (id, sweet) => {
     try {
-        const updatedSweet = await db.one('UPDATE sweets SET img=$1 title=$2, price=$3, content=$4, allergens=$5 is_fav=$6, WHERE id=$7 RETURNING *', [sweet.img, sweet.title, sweet.price, sweet.content, sweet.allergens, sweet.is_fav, id])
+        const updatedSweet = await db.one('UPDATE sweets SET img=$1 title=$2, price=$3, content=$4, allergens=$5 is_fav=$6, WHERE id=$7 RETURNING *', [sweet.img, sweet.title, sweet.price, sweet.content, sweet.allergens, sweet.is_favorite, id])
         return updatedSweet
     } catch (error) {
         return error

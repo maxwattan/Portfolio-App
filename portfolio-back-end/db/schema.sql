@@ -11,5 +11,5 @@ title TEXT,
 price TEXT,
 content TEXT,
 allergens TEXT,
-is_fav BOOLEAN
+is_favorite BOOLEAN 
 );
