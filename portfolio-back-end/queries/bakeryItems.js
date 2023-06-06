@@ -29,7 +29,7 @@ const getASweet = async (id) => {
 
 const createSweet = async (sweetToAdd) => {
     try {
-        const newSweet = await db.one('INSERT INTO sweets (img, title, price, content, allergens, is_fav ) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *', [sweetToAdd.img, sweetToAdd.title, sweetToAdd.price, sweetToAdd.content, sweetToAdd.allergens, sweetToAdd.is_fav])
+        const newSweet = await db.one('INSERT INTO sweets (img, title, price, content, allergens, is_favorite ) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *', [sweetToAdd.img, sweetToAdd.title, sweetToAdd.price, sweetToAdd.content, sweetToAdd.allergens, sweetToAdd.is_favorite])
         return newSweet
     } catch (error) {
         return error
@@ -51,7 +51,7 @@ const deleteSweet = async (id) => {
 
 const updateSweet = async (id, sweet) => {
     try {
-        const updatedSweet = await db.one('UPDATE sweets SET img=$1 title=$2, price=$3, content=$4, allergens=$5 is_fav=$6, WHERE id=$7 RETURNING *', [sweet.img, sweet.title, sweet.price, sweet.content, sweet.allergens, sweet.is_favorite, id])
+        const updatedSweet = await db.one('UPDATE sweets SET img=$1 title=$2, price=$3, content=$4, allergens=$5 is_favorite=$6, WHERE id=$7 RETURNING *', [sweet.img, sweet.title, sweet.price, sweet.content, sweet.allergens, sweet.is_favorite, id])
         return updatedSweet
     } catch (error) {
         return error
