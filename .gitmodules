@@ -1,3 +1,3 @@
-[submodule "path_to_submodule"]
-path = ./portfolio-front-end
-url = git:https://github.com/maxwattan/Portfolio-App
+[submodule "portfolio-front-end"]
+path = portfolio-front-end
+url = https://github.com/maxwattan/Portfolio-App.git
